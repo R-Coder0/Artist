@@ -150,7 +150,7 @@ const NotFound = () => {
                             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}>
                             <p className="text-lg text-gray-400 font-light leading-relaxed mb-4">
-                                The page you're looking for has drifted into the artistic ether, 
+                                The page you&lsquo;re looking for has drifted into the artistic ether, 
                                 lost among unfinished canvases and digital dreams.
                             </p>
                             
