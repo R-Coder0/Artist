@@ -264,12 +264,12 @@ const Contact = forwardRef<HTMLElement>((props, ref) => {
                                     <div className="space-y-4">
                                         <div>
                                             <p className="text-sm text-gray-400 font-light tracking-wider uppercase mb-1">Email</p>
-                                            <a 
-                                                href="mailto:artist@example.com"
-                                                className="text-white hover:text-gray-300 transition-colors duration-300 font-light"
-                                            >
-                                                artist@example.com
-                                            </a>
+                                    <a 
+                                    href="mailto:info@helenanderson.com"
+                                    className="text-gray-400 hover:text-white transition-colors duration-300 font-light text-sm"
+                                >
+                                    info@helenanderson.com
+                                </a>
                                         </div>
                                        
                                     </div>

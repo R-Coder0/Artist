@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState, useRef, useEffect, forwardRef } from "react";
 
 // Define the type for the artwork data
@@ -257,9 +258,9 @@ const AdvancedShowcase = forwardRef<HTMLElement>((props, ref) => {
                                             className={`transition-all duration-500 ${hoveredIndex === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
                                                 }`}
                                         >
-                                            <button className="text-sm text-gray-300 hover:text-white transition-colors duration-300 font-light tracking-wide">
+                                            <Link href="details" className="cursor-pointer text-sm text-gray-300 hover:text-white transition-colors duration-300 font-light tracking-wide">
                                                 View Details →
-                                            </button>
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -274,9 +275,9 @@ const AdvancedShowcase = forwardRef<HTMLElement>((props, ref) => {
                         }`}
                     >
                         <div className="inline-flex flex-col items-center space-y-4">
-                            <button className="group relative px-8 py-3 bg-transparent border border-white/30 text-white font-light text-sm tracking-wider uppercase transition-all duration-500 hover:bg-white hover:text-black">
+                            <Link href='/portfolio' className="cursor-pointer group relative px-8 py-3 bg-transparent border border-white/30 text-white font-light text-sm tracking-wider uppercase transition-all duration-500 hover:bg-white hover:text-black">
                                 <span className="relative z-10">View Complete Portfolio</span>
-                            </button>
+                            </Link>
 
                             <div className="w-px h-8 bg-white/20" />
 

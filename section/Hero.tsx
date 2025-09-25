@@ -137,7 +137,7 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
 {/* Explore Gallery Button */}
           <button
             onClick={onExploreClick} // Trigger scrolling to the showcase section
-            className="mt-10 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-full transition-all duration-500 hover:bg-white/20 hover:scale-105"
+            className="cursor-pointer mt-10 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-full transition-all duration-500 hover:bg-white/20 hover:scale-105"
           >
             Explore Gallery
           </button>

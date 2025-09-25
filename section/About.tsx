@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React, { useState, useRef, useEffect } from 'react';
 
 // interface Stat {
@@ -243,9 +244,9 @@ const About: React.FC = () => {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
-              <button className="group relative px-8 py-3 bg-transparent border border-white/30 text-white font-light text-sm tracking-wider uppercase transition-all duration-500 hover:bg-white hover:text-black">
+              <Link href='/about' className="group relative px-8 py-3 bg-transparent border border-white/30 text-white font-light text-sm tracking-wider uppercase transition-all duration-500 hover:bg-white hover:text-black">
                 <span className="relative z-10">Know More</span>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

@@ -218,10 +218,10 @@ const Footer: React.FC = () => {
                             {/* Copyright & Contact */}
                             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-8 text-center md:text-right">
                                 <a 
-                                    href="mailto:helen@example.com"
+                                    href="mailto:info@helenanderson.com"
                                     className="text-gray-400 hover:text-white transition-colors duration-300 font-light text-sm"
                                 >
-                                    helen@example.com
+                                    info@helenanderson.com
                                 </a>
                                 <div className="flex items-center space-x-2">
                                     <div className="w-2 h-2 rounded-full bg-green-400" />
