@@ -27,8 +27,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ARTISTNAME — Dimensional Art",
-  description: "Drawing + 3D experiments for bold brands.",
+  title: "Helen Anderson — Dimensional Art",
+  description: "Drawing + Photography for bold brands.",
 };
 
 export default function RootLayout({
