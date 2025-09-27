@@ -191,8 +191,8 @@ const About: React.FC = () => {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
               >
-                I am an artist who blends traditional media with digital techniques to create unique works of art.
-                With a passion for capturing moments in time, my work reflects my deep connection with the world around me.
+               I am a passionate artist whose hand-painted works celebrate color, texture, and emotion. Each piece she creates tells a story, inviting viewers to connect with art on a deeply personal level. Her work reflects a balance of creativity and craftsmanship, turning ordinary spaces into inspiring environments.
+
               </p>
 
               <p
@@ -200,9 +200,8 @@ const About: React.FC = () => {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
               >
-                I am constantly experimenting with new materials and approaches, seeking to evoke emotion and meaning
-                through my art. Each piece tells a story, whether through the bold strokes of charcoal or the delicate
-                lines of graphite.
+                Helen’s portfolio spans a variety of styles including landscapes, abstracts, and portraits, each created with meticulous attention to detail. Her use of color and brush techniques results in paintings that feel alive – whether it’s a calming scenery or a bold, expressive composition. She believes art should not just be seen but experienced, and her goal is to evoke emotion in every viewer.
+
               </p>
 
               <p
@@ -210,8 +209,7 @@ const About: React.FC = () => {
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                 }`}
               >
-                When I am not creating, I enjoy exploring the intersection of technology and art, looking for new ways
-                to push the boundaries of creative expression while staying true to the fundamentals of drawing and form.
+               This website has been thoughtfully designed to showcase Helen’s unique style in a simple, elegant, and mobile-friendly way. Visitors can explore a carefully curated gallery featuring her latest and past works, view artwork details such as size and medium, and even request a custom 
               </p>
             </div>
 

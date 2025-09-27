@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useState, useEffect } from 'react';
-// Define prop type for passing onExploreClick function
+
 interface AdvancedHeroProps {
   onExploreClick: () => void;
 }
@@ -9,29 +10,42 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const images = [
-    "/hero.webp",
-    "/hero2.png"
+  const slides = [
+    {
+      image: "/hero.webp",
+      title: "Hand-Painted Masterpieces",
+      description: "Helen Anderson’s Original Hand-Painted Masterpieces – Perfect for Your Space."
+    },
+    {
+      image: "/hero2.png",
+      title: "Transform Your Walls",
+      description: " Transform Your Walls with Helen’s Stunning Hand-Painted Art Collections."
+    },
+    // Agar aur images add karni hain to yaha add karo
+    // {
+    //   image: "/hero3.jpg",
+    //   title: "Third Title",
+    //   description: "Third description text here"
+    // }
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      handleImageChange();
+      handleSlideChange();
     }, 6000);
 
     return () => clearInterval(interval);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
-  const handleImageChange = () => {
+  const handleSlideChange = () => {
     setIsTransitioning(true);
     setTimeout(() => {
-      setCurrentIndex(prev => (prev + 1) % images.length);
+      setCurrentIndex(prev => (prev + 1) % slides.length);
       setIsTransitioning(false);
     }, 500);
   };
 
-  const handleDotClick = (index: React.SetStateAction<number>) => {
+  const handleDotClick = (index: number) => {
     if (index !== currentIndex && !isTransitioning) {
       setIsTransitioning(true);
       setTimeout(() => {
@@ -45,7 +59,7 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
     <section className="relative w-full h-[90vh] overflow-hidden">
       {/* Background Images with Advanced Animation */}
       <div className="absolute inset-0">
-        {images.map((image, index) => (
+        {slides.map((slide, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
@@ -54,7 +68,7 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
                 : 'opacity-0 scale-110 blur-sm'
             }`}
             style={{
-              background: `url(${image}) center/cover no-repeat`,
+              background: `url(${slide.image}) center/cover no-repeat`,
               transform: `scale(${index === currentIndex ? 1 : 1.1}) ${
                 isTransitioning ? 'translateX(30px)' : 'translateX(0)'
               }`,
@@ -98,6 +112,7 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
       {/* Main Content with Advanced Animations */}
       <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center px-4 max-w-4xl">
+          {/* Title with Animation */}
           <div className="overflow-hidden mb-6">
             <h1 
               className={`text-6xl md:text-7xl font-bold text-white transition-all duration-1000 transform ${
@@ -113,10 +128,11 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
                 textShadow: '0 4px 20px rgba(255,255,255,0.1)',
               }}
             >
-              Dimensional Art
+              {slides[currentIndex].title}
             </h1>
           </div>
           
+          {/* Description with Animation */}
           <div className="overflow-hidden">
             <p 
               className={`text-xl md:text-2xl text-white/90 leading-relaxed transition-all duration-1000 delay-200 transform ${
@@ -128,26 +144,25 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
                 textShadow: '0 2px 10px rgba(0,0,0,0.5)',
               }}
             >
-              Hand-drawn lines. Digital depth. A portfolio of illustrations, concept art, and playful 3D experiments.
+              {slides[currentIndex].description}
             </p>
           </div>
 
           {/* Animated CTA Button */}
           <div className="mt-10">
-{/* Explore Gallery Button */}
-          <button
-            onClick={onExploreClick} // Trigger scrolling to the showcase section
-            className="cursor-pointer mt-10 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-full transition-all duration-500 hover:bg-white/20 hover:scale-105"
-          >
-            Explore Gallery
-          </button>
+            <button
+              onClick={onExploreClick}
+              className="cursor-pointer mt-10 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-full transition-all duration-500 hover:bg-white/20 hover:scale-105"
+            >
+              Explore Gallery
+            </button>
           </div>
         </div>
       </div>
 
       {/* Vertical Dot Navigation */}
       <div className="absolute right-6 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 z-30">
-        {images.map((_, index) => (
+        {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => handleDotClick(index)}
@@ -191,7 +206,7 @@ const AdvancedHero: React.FC<AdvancedHeroProps> = ({ onExploreClick }) => {
         <div 
           className="w-full bg-white transition-all duration-6000 ease-linear"
           style={{
-            height: `${((currentIndex + 1) / images.length) * 100}%`,
+            height: `${((currentIndex + 1) / slides.length) * 100}%`,
           }}
         />
       </div>

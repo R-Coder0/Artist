@@ -145,7 +145,7 @@ const AdvancedShowcase = forwardRef<HTMLElement>((props, ref) => {
                             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}
                     >
-                        Selected Works
+                        Helen Anderson’s Art Portfolio
                     </h2>
 
                     <p 
@@ -153,8 +153,7 @@ const AdvancedShowcase = forwardRef<HTMLElement>((props, ref) => {
                             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                         }`}
                     >
-                        A curated collection of drawings, sketches, and illustrations
-                        exploring form, light, and expression through traditional media.
+                        Explore the creative world of Helen Anderson, a passionate artist who brings stories to life through her hand-painted artworks. Her portfolio features a diverse collection of landscapes, abstracts, and portraits – each one carefully crafted to evoke emotion and connect with the viewer.
                     </p>
 
                     {/* Simple line accent */}
